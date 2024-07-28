@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {
+  background-color: #191c1c;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+[hidden],
+.hidden {
+  visibility: none;
+  opacity: 0;
+}
+
+/* Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px;  /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #2c2c2c;  /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;  /* color of the scroll thumb */
+  border-radius: 6px;  /* roundness of the scroll thumb */
+  border: 3px solid #2c2c2c;  /* creates padding around scroll thumb */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #2c2c2c;
+}

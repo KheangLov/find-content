@@ -1,24 +1,35 @@
 {
   "name": "find-content",
   "version": "0.0.0",
+  "main": "main.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "electron": "electron .",
+    "electron-build": "ng build --base-href ./ && electron .",
+    "package": "electron-packager . --overwrite --asar --platform=win32 --arch=ia32 --icon=./public/favicon.ico --prune=true --out=release-builds FindContent --ignore=node_modules --extra-resource=./package.json"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.1.0",
+    "@angular/cdk": "^18.1.2",
     "@angular/common": "^18.1.0",
     "@angular/compiler": "^18.1.0",
     "@angular/core": "^18.1.0",
     "@angular/forms": "^18.1.0",
+    "@angular/material": "^18.1.2",
     "@angular/platform-browser": "^18.1.0",
     "@angular/platform-browser-dynamic": "^18.1.0",
     "@angular/router": "^18.1.0",
+    "@types/cheerio": "^0.22.35",
+    "@types/lodash": "^4.17.7",
+    "axios": "^1.7.2",
+    "cheerio": "^1.0.0-rc.12",
+    "lodash": "^4.17.21",
     "rxjs": "~7.8.0",
+    "start": "^5.1.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
@@ -26,13 +37,8 @@
     "@angular-devkit/build-angular": "^18.1.2",
     "@angular/cli": "^18.1.2",
     "@angular/compiler-cli": "^18.1.0",
-    "@types/jasmine": "~5.1.0",
-    "jasmine-core": "~5.1.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0",
+    "electron": "^31.3.0",
+    "electron-packager": "^17.1.2",
     "typescript": "~5.5.2"
   }
 }
