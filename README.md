@@ -29,3 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Captures
 
 ![image](https://github.com/user-attachments/assets/2a26e924-6599-4822-8975-8fb35e14a543)
+![image](https://github.com/user-attachments/assets/445eae47-f81f-498c-a6e7-01cae0b9037a)
